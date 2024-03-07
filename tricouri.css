@@ -1,0 +1,84 @@
+html{
+	background-color:skyblue;
+    animation-name:culoare;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+header>h1{
+	text-align: center;
+}
+nav>ul.meniu{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap ;
+    justify-content: space-around;
+}
+nav>ul.meniu>li{
+    flex-grow:1;
+    text-align:center;
+    height: 50px;
+    line-height: 50px;
+}
+nav{
+    height:50px;
+    background-color:cornflowerblue;
+}
+nav ul.submeniu{
+    display:none;
+}
+nav ul.meniu>li:hover>ul.submeniu{
+    display: block;
+    position:relative;
+    z-index:10;
+    width:100%;
+}
+.submeniu li{
+    width:100%;
+    text-align:center;
+    height: 50px;
+    line-height: 50px;
+    background-color: cornflowerblue;
+}
+nav ul.meniu li:hover{
+    background-color: royalblue;
+}
+ul{
+    list-style-type: none;
+}
+header{
+        position: relative;
+        height: 14vh;
+        width:100vw;  
+}
+#noutati>div{display:grid;
+    grid-template-columns: auto auto auto auto;
+    }
+#noutati>div>figure>img{
+    width:75px;
+    height:100px;
+}
+#noutati>div>figure:hover{
+    transition-duration: 2s;
+   opacity:50%;}
+body>section {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+@keyframes culoare{
+    0%    {background-color: skyblue;}
+    25%   {background-color: lightblue;}
+    50%   {background-color:royalblue;}
+    75%   {background-color: lightblue;}
+    100%  {background-color: skyblue;}
+}
+@media only screen and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  
+  #noutati>div>figure {
+    width: 100%;
+  }
+}

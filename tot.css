@@ -1,0 +1,188 @@
+
+  html {
+    background-color: skyblue;
+    animation-name: culoare;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  header>h1 {
+    text-align: center;
+  }
+
+  nav>ul.meniu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  nav>ul.meniu>li {
+    flex-grow: 1;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  nav {
+    height: 50px;
+    background-color: cornflowerblue;
+  }
+
+  nav ul.submeniu {
+    display: none;
+  }
+
+  nav ul.meniu>li:hover>ul.submeniu {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .submeniu li {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: cornflowerblue;
+  }
+
+  nav ul.meniu li:hover {
+    background-color: royalblue;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  header {
+    position: relative;
+    height: 14vh;
+    width: 100vw;
+  }
+
+  #container>section {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  #container {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    grid-template-areas:
+      'acasa acasa acasa acasa acasa'
+      'noutati noutati noutati noutati randfact'
+      'noutati noutati noutati noutati joc'
+      'noutati noutati noutati noutati anunturi';
+    padding: 10px;
+  }
+
+  #acasa {
+    grid-area: acasa;
+  }
+
+  #noutati {
+    grid-area: noutati;
+  }
+
+  #randomfact {
+    grid-area: randfact;
+  }
+
+  #joc {
+    grid-area: joc;
+  }
+
+  #anunturi {
+    grid-area: anunturi;
+  }
+
+  #joc>a>img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #noutati>div>figure>img {
+    width: 75px;
+    height: 100px;
+  }
+
+  #noutati>div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  #anunturi>p:nth-of-type(2) {
+    background-color: white;
+  }
+
+  #noutati>div>figure:hover {
+    opacity: 50%;
+    transition-duration: 2s;
+  }
+
+  @keyframes culoare {
+    0% {
+      background-color: skyblue;
+    }
+    25% {
+      background-color: lightblue;
+    }
+    50% {
+      background-color: royalblue;
+    }
+    75% {
+      background-color: lightblue;
+    }
+    100% {
+      background-color: skyblue;
+    }
+  }
+
+  #anunturi>p::before {
+    content: "🗞️";
+  }
+@media only screen and (max-width: 700px) {
+  html {
+    background-color: skyblue;
+  }
+  nav {
+    display: none;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+#noutati div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#noutati figure {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+#joc {
+  display: flex;
+  flex-wrap: wrap;
+}
+#joc h4 {
+  flex-basis: 100%;
+  margin-top: 20px; /* Add margin to separate the h4 from the images */
+}
+#joc a {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+
+}

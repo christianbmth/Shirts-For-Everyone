@@ -1,0 +1,47 @@
+section>p{border:100px;
+	font-size:30px;
+}
+html{
+	background-color:skyblue;
+}
+header>h1{
+	text-align: center;
+}
+nav>ul.meniu{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap ;
+    justify-content: space-around;
+}
+nav>ul.meniu>li{
+    flex-grow:1;
+    text-align:center;
+    height: 50px;
+    line-height: 50px;
+}
+nav{
+    height:50px;
+    background-color:peachpuff;
+}
+nav ul.submeniu{
+    display:none;
+}
+nav ul.meniu>li:hover>ul.submeniu{
+    display: block;
+    position:relative;
+    z-index:10;
+    width:100%;
+}
+.submeniu li{
+    width:100%;
+    text-align:center;
+    height: 50px;
+    line-height: 50px;
+    background-color: peachpuff;
+}
+nav ul.meniu li:hover{
+    background-color: indianred;
+}
+ul{
+    list-style-type: none;
+}
